@@ -1,11 +1,13 @@
-FROM ruby:2.1-onbuild
+FROM ruby:2.0
 MAINTAINER Micheal Waltz <ecliptik@gmail.com>
 
+#Setup environment and copy contents
 WORKDIR /app
-ADD Gemfile /app/Gemfile
-RUN ["/usr/bin/bundle", "install", "--standalone"]
-ADD . /app
+COPY [ "/", "/app" ]
+RUN [ "bundle", "install", "--standalone" ]
 
+#Expose default sinatra port
 EXPOSE 4567
 
-CMD ["ruby", "/app/github2hipchat.rb"]
+#Run event handler
+ENTRYPOINT [ "ruby", "/app/github2hipchat.rb" ]
