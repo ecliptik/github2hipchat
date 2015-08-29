@@ -10,13 +10,14 @@ This event handler is meant to be run as a Docker container.
 1. Modify the *hipchat_config.yml* configuration and update the **hipchat_room** and **hipchat_auth_token** values to match your configuration.
 
 An example configuration is below:
-
-> hipchat_api_url: 'https://hipchat.atlassian.com'
-> hipchat_auth_token: '1234567890abcdefghijklmnopqrstuvwxyz'
-> hipchat_room: 'myroom'
-> hipchat_message_color: 'yellow'
-> hipchat_message_from: 'github'
-> hipchat_message_format: 'html'
+```
+hipchat_api_url: 'https://hipchat.atlassian.com'
+hipchat_auth_token: '1234567890abcdefghijklmnopqrstuvwxyz'
+hipchat_room: 'myroom'
+hipchat_message_color: 'yellow'
+hipchat_message_from: 'github'
+hipchat_message_format: 'html'
+```
 
 2. Build the container image named *github2hipchat*
 ```
