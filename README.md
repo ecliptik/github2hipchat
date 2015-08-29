@@ -6,7 +6,7 @@ Event handler to handle messages from [Github](https://www.github.com) and publi
 
 This event handler is meant to be run as a [Docker](https://www.docker.com/) container.
 
-1. Modify the *hipchat_config.yml* configuration and update the **hipchat_room** and **hipchat_auth_token** values to match your configuration.
+- Modify the *hipchat_config.yml* configuration and update the **hipchat_room** and **hipchat_auth_token** values to match your configuration.
 
 An example configuration is below:
 ```
@@ -18,17 +18,17 @@ hipchat_message_from: 'github'
 hipchat_message_format: 'html'
 ```
 
-2. Build the container image named *github2hipchat*
+- Build the container image named *github2hipchat*
 ```
 docker build -t github2hipchat .
 ```
 
-3. Run the container as a daemon, exposing port 4567
+- Run the container as a daemon, exposing port 4567
 ```
 docker run -d -p 4567:4567 github2hipchat
 ```
 
-4. Create a github webhook in your repository to publish to your new event_handler,
+- Create a github webhook in your repository to publish to your new event_handler,
 ```
 http://containerhost:4567/event_handler
 ```
