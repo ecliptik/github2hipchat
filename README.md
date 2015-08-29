@@ -1,11 +1,11 @@
 github2hipchat
 ============
 
-Event handler to handle messages from Github and publish into a Hipchat Channel.
+Event handler to handle messages from [Github](https://www.github.com) and publish into a [Hipchat](https://www.hipchat.com/) channel.
 
 ## Installing
 
-This event handler is meant to be run as a Docker container.
+This event handler is meant to be run as a [Docker](https://www.docker.com/) container.
 
 1. Modify the *hipchat_config.yml* configuration and update the **hipchat_room** and **hipchat_auth_token** values to match your configuration.
 
