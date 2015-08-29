@@ -1,5 +1,4 @@
-github2hipchat
-============
+# github2hipchat
 
 Event handler to handle messages from [Github](https://www.github.com) and publish into a [Hipchat](https://www.hipchat.com/) channel.
 
